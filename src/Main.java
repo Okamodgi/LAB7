@@ -15,26 +15,11 @@ public class Main {
         System.out.print("Введите b: ");
         int b = in.nextInt();
 
-        UR1(x);
-        UR2(a, b);
-        UR3(x, a, b);
-    }
-    public static void UR1(int X) {
-       int Y1= 3*X+5;
-        System.out.println("Ответ 1: "+Y1);
-    }
-    public static void UR2(int a, int b) {
-        int Y2 = (a+b)/(a-b);
-        System.out.println("Ответ 2: "+Y2);
-    }
-    public static void UR3(int X, int a, int b) {
-        if(b!=0){
-            int res = (a*X/b);
-            double Y3 = 1;
-            for (int i = 1; i <= res; i++) {
-                Y3 = Y3 * i;
-            }
-            System.out.println("Ответ 3: "+ Y3);
-        }
+        Calc calc1 = new Calc(x, a, b);
+        Calc calc2 = new Calc(x, a, b);
+        Calc calc3 = new Calc(x, a, b);
+        calc1.UR1();
+        calc2.UR2();
+        calc3.UR3();
     }
 }
